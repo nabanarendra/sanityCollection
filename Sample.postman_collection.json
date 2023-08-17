@@ -89,7 +89,8 @@
 							"});\r",
 							"pm.test(\"Response Body = (\" + responseBody\r",
 							" + \")\", function () {\r",
-							"});"
+							"});\r",
+							"console.log(\"My name is lakhan\");"
 						],
 						"type": "text/javascript"
 					}
