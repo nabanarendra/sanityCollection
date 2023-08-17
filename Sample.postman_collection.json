@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "30feae92-2f72-4ca1-8c57-e553676b5f8a",
+		"name": "Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const requestBody = pm.request.body;\r",
+							"reponseBodyData = JSON.parse(responseBody);\r",
+							"pm.test(\"Request Body = (\" + requestBody\r",
+							" + \")\", function () {\r",
+							"});\r",
+							"pm.test(\"Response Body = (\" + responseBody\r",
+							" + \")\", function () {\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Value\":\"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.first.org/data/v1/countries?country=Angola&region=Africa",
+					"protocol": "https",
+					"host": [
+						"api",
+						"first",
+						"org"
+					],
+					"path": [
+						"data",
+						"v1",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Angola"
+						},
+						{
+							"key": "region",
+							"value": "Africa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test.skip(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							"const requestBody = pm.request.body;\r",
+							"reponseBodyData = JSON.parse(responseBody);\r",
+							"pm.test(\"Request Body = (\" + requestBody\r",
+							" + \")\", function () {\r",
+							"});\r",
+							"pm.test(\"Response Body = (\" + responseBody\r",
+							" + \")\", function () {\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Value\":\"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.first.org/global-irt/v1/teams?country=br&fields=short-team-name,email&limit=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"first",
+						"org"
+					],
+					"path": [
+						"global-irt",
+						"v1",
+						"teams"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "br"
+						},
+						{
+							"key": "fields",
+							"value": "short-team-name,email"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							"const requestBody = pm.request.body;\r",
+							"reponseBodyData = JSON.parse(responseBody);\r",
+							"pm.test(\"Request Body = (\" + requestBody\r",
+							" + \")\", function () {\r",
+							"});\r",
+							"pm.test(\"Response Body = (\" + responseBody\r",
+							" + \")\", function () {\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Value\":\"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.first.org/global-irt/v1/teams?country=br&fields=short-team-name,email&limit=1&envelope=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"first",
+						"org"
+					],
+					"path": [
+						"global-irt",
+						"v1",
+						"teams"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "br"
+						},
+						{
+							"key": "fields",
+							"value": "short-team-name,email"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "envelope",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"const requestBody = pm.request.body;\r",
+							"reponseBodyData = JSON.parse(responseBody);\r",
+							"pm.test(\"Request Body = (\" + requestBody\r",
+							" + \")\", function () {\r",
+							"});\r",
+							"pm.test(\"Response Body = (\" + responseBody\r",
+							" + \")\", function () {\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Value\":\"Test\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.first.org/global-irt/v1/teams?q=circl",
+					"protocol": "https",
+					"host": [
+						"api",
+						"first",
+						"org"
+					],
+					"path": [
+						"global-irt",
+						"v1",
+						"teams"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "circl"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Value\":\"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.first.org/global-irt/v1/teams?country=br&fields=short-team-name,email&limit=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"first",
+						"org"
+					],
+					"path": [
+						"global-irt",
+						"v1",
+						"teams"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "br"
+						},
+						{
+							"key": "fields",
+							"value": "short-team-name,email"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DBQuery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "User-Name",
+						"value": "mapr",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"queryType\": \"SQL\",\r\n    \"query\": \"SELECT * FROM il.il_audit_log ial WHERE txn_id = 'HDFCFYNDNATESTTXNNO1689743764509' ORDER BY physical_time_of_event DESC;\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://35.200.172.13:5433/query.json",
+					"protocol": "http",
+					"host": [
+						"35",
+						"200",
+						"172",
+						"13"
+					],
+					"port": "5433",
+					"path": [
+						"query.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
